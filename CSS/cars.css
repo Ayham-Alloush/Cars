@@ -1,0 +1,691 @@
+body{
+  margin: 0 ;
+  /* background-color: black ; */
+  font-size: 16px ;
+}
+
+html{
+  scroll-behavior: smooth ;
+}
+
+/* variables */
+:root{
+  --section-padding:80px ;
+  --main-color: #27cee2 ;
+}
+/* variables */
+
+/* global valus */
+p{
+  font-family: 'Poppins', sans-serif;
+  margin: 0 ;
+}
+
+h1,h2,h3,h4{
+  color: white ;
+  font-family: 'Orbitron', sans-serif ;
+  margin: 0 ;
+}
+
+a{
+  font-family: sans-serif ;
+  text-decoration: none ;
+  display: block ;
+}
+
+ul{
+  list-style: none ;
+  margin: 0 ;
+  padding: 0 ;
+}
+
+.container{
+  background-color: transparent ;
+  text-align: center ;
+  padding: 0 15px ;
+  margin: 0 auto ;
+  position: relative ;
+}
+/* global valus */
+
+/* components */
+.but{
+  background-color: black  ;
+  color: whitesmoke ;
+  font-size: 20px ;
+  display: flex ;
+  justify-content: center ;
+  align-items: center ;
+  width: 180px ;
+  height: 55px ;
+  border: none ;
+  transition: color 0.3s linear , background-color 0.4s linear ;
+}
+
+.but:hover{
+  background-color: white ;
+  color: black ;
+}
+
+.flex-col{
+  display: flex ;
+  flex-flow: nowrap column ;
+  justify-content: center ;
+  align-items: center ;
+}
+
+.under-line{
+  position: relative ;
+}
+
+.under-line::after{
+  content: "" ;
+  width: 60% ;
+  height: 1.5px ;
+  background-color: white ;
+  position: absolute   ;
+  left: 50% ;
+  top: calc(100% + 10px ) ;
+  transform:translatex(-50%);
+}
+
+/* components */
+
+
+
+/* Header */
+header{
+  -webkit-box-sizing: border-box ;
+  -moz-box-sizing: border-box ;
+  -o-box-sizing: border-box ;
+  box-sizing: border-box ;
+  display: flex ;
+  justify-content: space-between ;
+  align-items: center ;
+  width: 100% ;
+  padding: 20px ;
+  position: absolute ;
+  top: 0 ;
+}
+
+.menu{
+  cursor: pointer ;
+}
+/* Header */
+
+/* Nav */
+nav{
+  background-color:  rgb(57,106,215,0.9) ;
+  font-size: 22px ;
+  -webkit-box-sizing: border-box ;
+  -moz-box-sizing: border-box ;
+  -o-box-sizing: border-box ;
+  box-sizing: border-box ;
+  overflow: hidden ;
+  width: 0 ;
+  height: 100vh ;
+  padding-bottom: 125px ;
+  position: fixed  ;
+  top: 0 ;
+  left: 0 ;
+  z-index: 5;
+  transition: width 0.5s linear ;
+}
+
+.menu:hover + nav{
+  width: 80% ;
+}
+
+.x{
+  color: white ;
+  font-size: 30px ;
+  position: absolute ;
+  top: 8%  ;
+  right: 4%  ;
+  cursor: pointer ;
+}
+
+nav ul{
+  gap: 15px ;
+}
+
+nav ul a{
+  color: white ;
+  font-family: 'Poppins' ;
+}
+/* Nav */
+
+/* Home */
+.home{
+  background-image: url(../images/banner-bg.png);
+  background-size: cover ;
+  color: white ;
+  -webkit-box-sizing: border-box ;
+  -moz-box-sizing: border-box ;
+  -o-box-sizing: border-box ;
+  box-sizing: border-box ;
+  padding-top: var(--section-padding , 100px) ;
+
+}
+
+.home h1{
+  font-size: 30px ;
+  margin: 70px 0 10px 0 ;
+}
+
+.home p{
+  font-size: 15px ;
+  margin-bottom: 50px ;
+}
+
+.home a{
+  margin-bottom: 20px ;
+  width: 190px ;
+  height: 60px ;
+}
+
+.home img{
+  width: 100% ;
+  transform: translatey(18%) ;
+}
+
+.home .foot{
+  background-color: #081a2c ;
+  display: flex ;
+  justify-content: center ;
+  align-items: center ;
+  gap: 5px ;
+  height: 80px ;
+}
+
+.home .foot > div{
+  background-color: whitesmoke  ;
+  width: 22px ;
+  height: 22px ;
+  border-radius: 50% ;
+  animation: circles 2s linear calc(1s * var(--i)) alternate-reverse  infinite ;
+}
+/* Home */
+
+/* About */
+.about{
+  background-image: url(../images/about-bg.png);
+  padding-top: var(--section-padding) ;
+  padding-bottom: var(--section-padding) ;
+  position: relative ;
+}
+
+.about::after{
+  content: "" ;
+  width: 100% ;
+  height: 100% ;
+  position: absolute ;
+  top: 0 ;
+  left: 0 ;
+  animation: shadow 1s linear alternate-reverse infinite ;
+}
+
+.about .text-wrap{
+  border: 1px solid whitesmoke ;
+  padding: 45px 20px ;  
+}
+
+.about .text-wrap h1{
+  font-size: 35px ;
+  font-weight: 400 ;
+}
+
+.about .text-wrap p{
+  color: white ;
+  font-size: 18px ;
+  line-height: 1.6;
+  margin-top: 10px ;
+}
+
+.about .text-wrap a{
+  margin-top: 40px ;
+}
+
+.about img{
+  width: 100% ;
+  margin-top: 30px ;
+}
+/* About */
+
+/* How To Play */
+.how{
+  background-image: url(../images/game-bg.png);
+  background-size: cover ;
+  padding-top: var(--section-padding) ;
+  padding-bottom: var(--section-padding) ;
+}
+
+.how h1{
+  font-size: 23px ;
+  font-weight: 400 ;
+}
+
+.form-text-wrap{
+  -webkit-box-sizing: border-box ;
+  -moz-box-sizing: border-box ;
+  -o-box-sizing: border-box ;
+  box-sizing: border-box ;
+  padding: 25px  ;
+  border: 1px solid white ;
+  margin-top: 65px ;
+}
+
+.form-text-wrap h2{
+  font-size: 20px ;
+  font-weight: 400 ;
+}
+
+.form-wrap{
+  -webkit-box-sizing: border-box ;
+  -moz-box-sizing: border-box ;
+  -o-box-sizing: border-box ;
+  box-sizing: border-box ;
+  align-items: flex-start ;
+  gap: 50px ;
+  width: 100% ;
+}
+
+.form-wrap form > input:not(.but){
+  font-size: 16px ;
+  -webkit-box-sizing: border-box ;
+  -moz-box-sizing: border-box ;
+  -o-box-sizing: border-box ;
+  box-sizing: border-box ;
+  width: 100% ;
+  height: 50px ;
+  padding-left: 25px ;
+  border: none ;
+  margin-bottom: 45px ;
+}
+
+.form-wrap form > input:focus{
+  outline: none ;
+}
+
+.form-wrap form > .but{
+  background-color: var(--main-color);
+  color: whitesmoke ;
+  font-family: sans-serif ;
+  font-size: 16px ;
+  font-weight: 300 ;
+  letter-spacing: 1px;
+  cursor: pointer ;
+}
+
+/* overwrite on the but:hover component */
+.form-wrap form > .but:hover{
+  color:  whitesmoke ;
+}
+
+.form-text-wrap .numbers{
+  text-align: left ;
+  padding: 50px 0 0 55px ;
+}
+
+.form-text-wrap .numbers .num{
+  color: white ;
+  font-weight: 500 ;
+  position: relative ;
+}
+
+.form-text-wrap .numbers .num:nth-child(2){
+  margin: 50px 0 ;
+}
+
+.form-text-wrap .numbers .num::before{
+  content: "" ;
+  font-family: 'Orbitron', sans-serif ;
+  font-size: 20px ;
+  font-weight: 400 ;
+  position: absolute ;
+  top: 0 ;
+  /*  
+  form-text-wrap has 25px padding and .numbers has 55px 
+  so -40px will make the numbers in the center horizontally after translatex 
+  */
+  left: -40px ;
+  transform: translatex(-50%) ;
+}
+  
+.form-text-wrap .numbers .num:nth-child(1):before{
+  content: "01" ;
+}
+
+.form-text-wrap .numbers .num:nth-child(2):before{
+  content: "02" ;
+}
+
+.form-text-wrap .numbers .num:nth-child(3):before{
+  content: "03" ;
+}
+/* How To Play */
+
+/* Earn Money */
+.earn{
+  background-image: url(../images/blog-bg.png) ;
+  background-size: cover ;
+  padding-top: var(--section-padding) ;
+}
+
+.earn h1{
+  font-size: 23px ;
+  font-weight: 400 ;
+  margin-bottom: 35px ;
+}
+
+.earn p{
+  font-size: 16px ;
+  color: white ;
+  font-weight: 400 ;
+}
+
+.earn h1 + p + img {
+  width: 100% ;
+  margin-top: 40px ;
+}
+
+.earn .three-but{
+  margin: 40px 0 ;
+  gap: 20px ;
+}
+
+.earn .three-but .active{
+  background-color: white ;
+  color: black ;
+}
+
+.download-wrap{
+  text-align: left ;
+}
+
+.download-wrap h2{
+  font-size: 24px ;
+  font-weight: 400 ;
+}
+
+.download-wrap h2 + p{
+  margin-top: 10px ;
+  font-size: 14px; 
+}
+
+
+.download-wrap .two-pic{
+  display: flex ;
+  justify-content: flex-start ;
+  gap: 25px  ;
+}
+
+.download-wrap .two-pic img{
+  width: 45% ;
+  max-width: 200px ;
+  margin: 40px 0 ;
+}
+
+.download-wrap + img{
+  width: 100% ;
+  margin-bottom: 70px ;
+}
+
+/* Earn Money */
+
+/* Contact Us */
+.last-sec{
+  background-color: #111b1d ;
+  padding-top: var(--section-padding) ;
+  padding-bottom: var(--section-padding) ;
+}
+
+.last-sec h1{
+  font-size: 40px ;
+  font-weight: 400 ;
+}
+
+.last-sec ul{
+  display: flex ;
+  gap: 13px ;
+  width: fit-content ;
+  margin: 30px auto ;
+}
+
+.last-sec ul a{
+  color: white ;
+  font-size: 12px ;
+  transition: color 0.3s linear ;
+}
+
+.last-sec ul a:hover{
+  color: var(--main-color) ;
+}
+
+.last-sec ul + h2{
+  font-family: sans-serif;
+  font-size: 30px ;
+  font-weight: 400;
+  letter-spacing: 1px ;
+  width: fit-content ;
+  margin: 0 auto 40px ;
+}
+
+/* overwrite on under-line component */
+.last-sec ul + h2::after{
+  width: 160% ;
+  height: 1px ;
+}
+
+.last-sec form{
+  gap: 30px ;
+}
+
+.last-sec form input{
+  background-color: transparent ;
+  color: white ;
+  font-size: 18px ;
+  -webkit-box-sizing: border-box ;
+  -moz-box-sizing: border-box ;
+  -o-box-sizing: border-box ;
+  box-sizing: border-box ;
+  width: 400px ;
+  height: 50px ;
+  border: 2px solid white ;
+}
+
+.last-sec form input:focus{
+  outline: none ;
+}
+
+.last-sec form input[type = email]{
+  padding-left: 15px ;
+}
+
+.last-sec form input[type = submit]{
+  cursor: pointer ;
+  transition: background-color 0.4s linear ;
+}
+
+.last-sec form input[type = submit]:hover{
+  background-color: var(--main-color) ;
+}
+/* Contact Us */
+
+/* Footer */
+footer{
+  background-color: var(--main-color); ;
+  color: white ;
+  font-size: 16px ;
+  font-weight: 300 ;
+  text-align: center ;
+  padding: 20px ;
+}
+/* Footer */
+
+/* ----------------------------------------------- */
+@keyframes circles {
+  100%{
+    background-color: var(--main-color);
+  }
+}
+
+@keyframes shadow {
+  100%{
+  box-shadow: 0 0 75px 10px #4a8c28 inset ;
+  }
+}
+/* ----------------------------------------------- */
+@media (min-width: 576px){
+  .container{
+    width: 540px ;
+  }
+
+  /* Home */
+  .home h1{
+    font-size: 50px ;
+  }
+
+  .home p{
+    font-size: 16px ;
+  }
+  /* Home */
+}
+/* ----------------------------------------------- */
+@media (min-width: 768px){
+  .container{
+    width: 720px ;
+  }
+
+  /* Home */
+  .home h1{
+    font-size: 60px ;
+  }
+
+  .home .foot{
+    height: 150px
+  }
+
+  .home a{
+    width: 225px ;
+    height: 75px ;
+    margin-bottom: 200px ; 
+  }
+  /* Home */
+
+  /* About */
+  .special{
+    overflow: hidden ;
+    flex-flow: nowrap row ;
+    justify-content: flex-start ;
+  }
+
+  .about .text-wrap{
+    max-width: 50% ;
+  }
+    
+  .about .text-wrap a{
+    margin-top: 145px ;
+    position: relative ;
+    /* making the button clickable over the car img */
+    z-index: 2 ;
+  }
+
+  .about img{
+    position: absolute ;
+    left: 50% ;
+    /* making the car img over the border of text-wrap */
+    z-index: 1 ;
+    transform: translate(-45%,20%) ;
+  }
+  /* About */
+
+  /* How To Play */
+  .how h1{
+    font-size: 40px ;
+  }
+  .form-text-wrap{
+    flex-direction: row ;
+    gap: 50px ;
+  }
+  /* removing the top padding for .numbers */
+  .form-text-wrap .numbers{
+    padding: 0 0 0 55px ;
+  }
+  /* How To Play */
+
+  /* Earn money */
+  .earn h1{
+    font-size: 27px ;
+  }
+  .earn .three-but{
+    flex-direction: row ;
+  }
+
+  .download{
+    flex-direction: row ;
+    margin-top: 80px ;
+  }
+
+  .download-wrap{
+    width: 55% ;
+  }
+
+  .download-wrap h2 + p{
+    font-size: 16px; 
+  }
+
+  .download-wrap + img{
+    width: 35% ;
+  }
+  /* Earn money */
+
+  /* Contact Us */
+  .last-sec ul{
+    gap: 38px ;
+  }
+  .last-sec ul a{
+    font-size: 18px ;
+  }
+  /* Contact Us */
+}
+/* ----------------------------------------------- */
+@media (min-width: 992px){
+  .container{
+    width: 960px ;
+  }
+
+  /* About */
+  .about .text-wrap p{
+    font-size: 20px ;
+  }
+
+  .about img{
+    width: 100% ;
+    transform: translate(-45%,15%) ;
+  }
+
+  .about .text-wrap a{
+    margin-top: 200px ;
+  }
+  /* About */
+}
+/* ----------------------------------------------- */
+@media (min-width: 1200px){
+  .container{
+    width: 1140px ;
+  }
+
+  /* About */
+  .about .text-wrap a{
+    margin-top: 240px ;
+  }
+  /* About */
+
+  /* Earn Money */
+  .download-wrap .two-pic img{
+    max-width: 230px ;
+  }
+  /* Earn Money */
+}
+
