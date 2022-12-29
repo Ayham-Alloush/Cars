@@ -489,7 +489,7 @@ nav ul a{
   -moz-box-sizing: border-box ;
   -o-box-sizing: border-box ;
   box-sizing: border-box ;
-  width: 400px ;
+  width: 95% ;
   height: 50px ;
   border: 2px solid white ;
 }
@@ -644,6 +644,11 @@ footer{
   .last-sec ul{
     gap: 38px ;
   }
+  
+  .last-sec form input{
+    width: 400px ;
+  }
+  
   .last-sec ul a{
     font-size: 18px ;
   }
